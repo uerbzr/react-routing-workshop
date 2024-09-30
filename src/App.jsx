@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CreateCarPage from "./pages/CreateCarPage";
 import Cars from "./components/Cars";
+import Car from "./components/Car";
 import initialCarData from "./data/data.js";
 import Welcome from "./components/Welcome.jsx";
 
@@ -73,6 +74,7 @@ function App() {
             <div className="yellow">
               <Routes>
                 <Route path="/" element={<Welcome />} />
+                <Route path="/cars/:id" element={<Car cars={cars} />} />
                 <Route path="/cars" element={<Cars cars={cars} />} />
                 <Route
                   path="/cars/create"
